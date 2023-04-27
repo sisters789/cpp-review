@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <stack>
+#include <map>
 using namespace std;
 
 class shape {
@@ -63,32 +65,6 @@ int main() {
     
     p=&tri;
     cout << p->area() << endl;
-
-    fstream file;
-    file.open("new.txt", ios::out);
-
-    file << "hello\ngb\nnew";
-    file.close();
-
-    file.open("new.txt", ios::in);
-    string text = "";
-    string str = "";
-    while(getline(file, str)) {
-        text += str;
-    }
-    cout << text << endl;
-    file.close();
-
-    int x = 50;
-    int y = 0;
-    double z = 0;
- 
-    try {
-        z = division(x, y);
-        cout << z << endl;
-    } catch (string msg) {
-        cerr << msg << endl;
-    }
 
     return 0;
 }
